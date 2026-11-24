@@ -1,0 +1,28 @@
+{
+  "test_id": "B2_MCP_Call_EnvParams",
+  "category": "MCP Payload Efficiency",
+  "name": "MCP tools/call (env_params)",
+  "timestamp": "2026-11-24T01:19:41.207148+00:00",
+  "method": "POST",
+  "url": "https://tos-mcp.app.fortyguard.com/mcp",
+  "request_headers": {
+    "Content-Type": "application/json",
+    "Authorization": "Bearer REDACTED_API_KEY"
+  },
+  "request_body": {
+    "jsonrpc": "2.0",
+    "id": 3,
+    "method": "tools/call",
+    "params": {
+      "name": "env_params",
+      "arguments": {
+        "latitude": 47.6062,
+        "longitude": -122.3321
+      }
+    }
+  },
+  "response_status": 200,
+  "latency_ms": 767.9,
+  "response_body": "event: message\r\ndata: {\"jsonrpc\":\"2.0\",\"id\":3,\"result\":{\"content\":[{\"text\":\"{\\\"ok\\\":false,\\\"error\\\":{\\\"category\\\":\\\"invalid_input\\\",\\\"message\\\":\\\"The request input is invalid.\\\",\\\"retriable\\\":false,\\\"field\\\":\\\"temperature\\\"},\\\"trace\\\":{\\\"trace_id\\\":\\\"54f01a9503bd\\\",\\\"tool\\\":\\\"env_params\\\",\\\"plan_type\\\":\\\"premium\\\",\\\"decision\\\":\\\"allow\\\",\\\"status\\\":\\\"error\\\",\\\"latency_ms\\\":0,\\\"error\\\":\\\"invalid_input\\\"},\\\"message\\\":\\\"The request input is invalid.\\\"}\",\"type\":\"text\"}],\"isError\":true,\"structuredContent\":{\"ok\":false,\"error\":{\"category\":\"invalid_input\",\"message\":\"The request input is invalid.\",\"retriable\":false,\"field\":\"temperature\"},\"trace\":{\"trace_id\":\"54f01a9503bd\",\"tool\":\"env_params\",\"plan_type\":\"premium\",\"decision\":\"allow\",\"status\":\"error\",\"latency_ms\":0,\"error\":\"invalid_input\"},\"message\":\"The request input is invalid.\"}}}\r\n\r\n",
+  "notes": "Payload size: 837 bytes (~209 tokens)"
+}

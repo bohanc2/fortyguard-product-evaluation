@@ -1,0 +1,59 @@
+{
+  "test_id": "stress_bowtie_polygon",
+  "name": "Self-intersecting Polygon Validation",
+  "endpoint_type": "REST",
+  "timestamp": "2026-11-24T01:31:52.784271+00:00",
+  "status_code": 400,
+  "latency_ms": 505.91,
+  "request_payload": {
+    "polygon_aoi": {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "type": "Feature",
+          "properties": {},
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -122.335,
+                  47.608
+                ],
+                [
+                  -122.33,
+                  47.612
+                ],
+                [
+                  -122.335,
+                  47.612
+                ],
+                [
+                  -122.33,
+                  47.608
+                ],
+                [
+                  -122.335,
+                  47.608
+                ]
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    "date_time": {
+      "start_date": "2024-07-15",
+      "start_time": "14:00",
+      "filter_type": 1
+    },
+    "granularity": 100
+  },
+  "response_payload": {
+    "error": true,
+    "status_code": 400,
+    "message": "Polygon must have a nonzero area.",
+    "field": "polygon_aoi"
+  },
+  "notes": "Expect 422/400 validation error; check for 500 crash"
+}

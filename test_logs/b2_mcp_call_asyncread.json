@@ -1,0 +1,27 @@
+{
+  "test_id": "B2_MCP_Call_AsyncRead",
+  "category": "MCP Payload Efficiency",
+  "name": "MCP tools/call (heatmap_read real ID)",
+  "timestamp": "2026-11-24T01:19:42.452525+00:00",
+  "method": "POST",
+  "url": "https://tos-mcp.app.fortyguard.com/mcp",
+  "request_headers": {
+    "Content-Type": "application/json",
+    "Authorization": "Bearer REDACTED_API_KEY"
+  },
+  "request_body": {
+    "jsonrpc": "2.0",
+    "id": 4,
+    "method": "tools/call",
+    "params": {
+      "name": "heatmap_read",
+      "arguments": {
+        "activity_id": "test-activity-id-0000"
+      }
+    }
+  },
+  "response_status": 200,
+  "latency_ms": 1243.92,
+  "response_body": "event: message\r\ndata: {\"jsonrpc\":\"2.0\",\"id\":4,\"result\":{\"content\":[{\"text\":\"{\\\"ok\\\":false,\\\"error\\\":{\\\"category\\\":\\\"denied\\\",\\\"message\\\":\\\"Activity not found or unavailable to this account. Check the activity ID and try again.\\\",\\\"retriable\\\":false,\\\"code\\\":\\\"ACTIVITY_UNAVAILABLE\\\"},\\\"trace\\\":{\\\"trace_id\\\":\\\"656edd46c201\\\",\\\"tool\\\":\\\"heatmap_read\\\",\\\"plan_type\\\":\\\"premium\\\",\\\"decision\\\":\\\"allow\\\",\\\"status\\\":\\\"denied\\\",\\\"latency_ms\\\":408,\\\"error\\\":\\\"denied\\\"},\\\"message\\\":\\\"Activity not found or unavailable to this account. Check the activity ID and try again.\\\"}\",\"type\":\"text\"}],\"isError\":true,\"structuredContent\":{\"ok\":false,\"error\":{\"category\":\"denied\",\"message\":\"Activity not found or unavailable to this account. Check the activity ID and try again.\",\"retriable\":false,\"code\":\"ACTIVITY_UNAVAILABLE\"},\"trace\":{\"trace_id\":\"656edd46c201\",\"tool\":\"heatmap_read\",\"plan_type\":\"premium\",\"decision\":\"allow\",\"status\":\"denied\",\"latency_ms\":408,\"error\":\"denied\"},\"message\":\"Activity not found or unavailable to this account. Check the activity ID and try again.\"}}}\r\n\r\n",
+  "notes": "Using fallback ID. Payload: 1067 bytes (~266 tokens)"
+}

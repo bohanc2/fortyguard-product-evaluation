@@ -1,0 +1,26 @@
+{
+  "test_id": "A1_Auth_InvalidKey",
+  "category": "Auth & Quota",
+  "name": "Invalid API Key Test",
+  "timestamp": "2026-11-24T01:17:10.552407+00:00",
+  "method": "POST",
+  "url": "https://api.fortyguard.com/v1/env_params",
+  "request_headers": {
+    "Content-Type": "application/json",
+    "api-key": "invali..."
+  },
+  "request_body": {
+    "latitude": 47.6062,
+    "longitude": -122.3321
+  },
+  "response_status": 401,
+  "latency_ms": 381.91,
+  "response_body": {
+    "error": true,
+    "status_code": 401,
+    "details": {
+      "message": "Invalid or unknown API key."
+    }
+  },
+  "notes": ""
+}

@@ -1,0 +1,21 @@
+{
+  "test_id": "core_monitoring_list_monitors",
+  "name": "List Monitors Operation",
+  "endpoint_type": "MCP",
+  "timestamp": "2026-11-24T01:31:51.543800+00:00",
+  "status_code": 200,
+  "latency_ms": 1242.79,
+  "request_payload": {
+    "jsonrpc": "2.0",
+    "id": 301,
+    "method": "tools/call",
+    "params": {
+      "name": "monitoring",
+      "arguments": {
+        "operation": "list_monitors"
+      }
+    }
+  },
+  "response_payload": "event: message\r\ndata: {\"jsonrpc\":\"2.0\",\"id\":301,\"result\":{\"content\":[{\"text\":\"{\\\"ok\\\":true,\\\"result\\\":{\\\"tool\\\":\\\"monitoring\\\",\\\"value\\\":{\\\"operation\\\":\\\"list_monitors\\\",\\\"status\\\":\\\"completed\\\",\\\"monitors\\\":[],\\\"has_more\\\":false},\\\"evidence\\\":[],\\\"warnings\\\":[]},\\\"trace\\\":{\\\"trace_id\\\":\\\"4338c4a41fef\\\",\\\"tool\\\":\\\"monitoring\\\",\\\"plan_type\\\":\\\"premium\\\",\\\"decision\\\":\\\"allow\\\",\\\"status\\\":\\\"ok\\\",\\\"latency_ms\\\":389,\\\"cost_credits\\\":0}}\",\"type\":\"text\"}],\"isError\":false,\"structuredContent\":{\"ok\":true,\"result\":{\"tool\":\"monitoring\",\"value\":{\"operation\":\"list_monitors\",\"status\":\"completed\",\"monitors\":[],\"has_more\":false},\"evidence\":[],\"warnings\":[]},\"trace\":{\"trace_id\":\"4338c4a41fef\",\"tool\":\"monitoring\",\"plan_type\":\"premium\",\"decision\":\"allow\",\"status\":\"ok\",\"latency_ms\":389,\"cost_credits\":0}}}}\r\n\r\n",
+  "notes": ""
+}

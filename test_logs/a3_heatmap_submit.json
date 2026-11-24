@@ -1,0 +1,109 @@
+{
+  "test_id": "A3_Heatmap_Submit",
+  "category": "Async Lifecycle",
+  "name": "Create Heatmap (Seattle)",
+  "timestamp": "2026-11-24T01:17:12.438693+00:00",
+  "method": "POST",
+  "url": "https://api.fortyguard.com/v1/heatmap",
+  "request_headers": {
+    "Content-Type": "application/json",
+    "api-key": "REDACTED_API_KEY"
+  },
+  "request_body": {
+    "polygon_aoi": {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "type": "Feature",
+          "properties": {},
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -122.335,
+                  47.608
+                ],
+                [
+                  -122.33,
+                  47.608
+                ],
+                [
+                  -122.33,
+                  47.612
+                ],
+                [
+                  -122.335,
+                  47.612
+                ],
+                [
+                  -122.335,
+                  47.608
+                ]
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    "granularity": 100
+  },
+  "response_status": 422,
+  "latency_ms": 641.73,
+  "response_body": {
+    "error": true,
+    "status_code": 422,
+    "message": "Field 'date_time' is required.",
+    "field": "date_time",
+    "detail": [
+      {
+        "type": "missing",
+        "loc": [
+          "body",
+          "date_time"
+        ],
+        "msg": "Field required",
+        "input": {
+          "polygon_aoi": {
+            "type": "FeatureCollection",
+            "features": [
+              {
+                "type": "Feature",
+                "properties": {},
+                "geometry": {
+                  "type": "Polygon",
+                  "coordinates": [
+                    [
+                      [
+                        -122.335,
+                        47.608
+                      ],
+                      [
+                        -122.33,
+                        47.608
+                      ],
+                      [
+                        -122.33,
+                        47.612
+                      ],
+                      [
+                        -122.335,
+                        47.612
+                      ],
+                      [
+                        -122.335,
+                        47.608
+                      ]
+                    ]
+                  ]
+                }
+              }
+            ]
+          },
+          "granularity": 100
+        }
+      }
+    ]
+  },
+  "notes": ""
+}

@@ -1,0 +1,67 @@
+{
+  "test_id": "A4_Edge_MalformedGeoJSON",
+  "category": "Edge Cases",
+  "name": "Malformed GeoJSON Payload",
+  "timestamp": "2026-11-24T01:19:38.649230+00:00",
+  "method": "POST",
+  "url": "https://api.fortyguard.com/v1/heatmap",
+  "request_headers": {
+    "Content-Type": "application/json",
+    "api-key": "REDACTED_API_KEY"
+  },
+  "request_body": {
+    "polygon_aoi": {
+      "type": "InvalidCollection",
+      "features": [
+        {
+          "geometry": {
+            "type": "BrokenPolygon",
+            "coordinates": [
+              [
+                12,
+                34
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "response_status": 422,
+  "latency_ms": 309.83,
+  "response_body": {
+    "error": true,
+    "status_code": 422,
+    "message": "Field 'date_time' is required.",
+    "field": "date_time",
+    "detail": [
+      {
+        "type": "missing",
+        "loc": [
+          "body",
+          "date_time"
+        ],
+        "msg": "Field required",
+        "input": {
+          "polygon_aoi": {
+            "type": "InvalidCollection",
+            "features": [
+              {
+                "geometry": {
+                  "type": "BrokenPolygon",
+                  "coordinates": [
+                    [
+                      12,
+                      34
+                    ]
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "notes": ""
+}

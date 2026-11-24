@@ -1,0 +1,29 @@
+{
+  "test_id": "B1_MCP_Initialize",
+  "category": "MCP Tool Discovery",
+  "name": "MCP Initialize Handshake",
+  "timestamp": "2026-11-24T01:19:39.539458+00:00",
+  "method": "POST",
+  "url": "https://tos-mcp.app.fortyguard.com/mcp",
+  "request_headers": {
+    "Content-Type": "application/json",
+    "Authorization": "Bearer REDACTED_API_KEY"
+  },
+  "request_body": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+      "protocolVersion": "2024-11-05",
+      "capabilities": {},
+      "clientInfo": {
+        "name": "Senior-SWE-Evaluator",
+        "version": "1.0.0"
+      }
+    }
+  },
+  "response_status": 200,
+  "latency_ms": 888.14,
+  "response_body": "event: message\r\ndata: {\"jsonrpc\":\"2.0\",\"id\":1,\"result\":{\"protocolVersion\":\"2024-11-05\",\"capabilities\":{\"logging\":{},\"prompts\":{\"listChanged\":true},\"resources\":{\"subscribe\":false,\"listChanged\":true},\"tools\":{\"listChanged\":true}},\"serverInfo\":{\"name\":\"FortyGuard\",\"version\":\"4.0.11\"}}}\r\n\r\n",
+  "notes": ""
+}

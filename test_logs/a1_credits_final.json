@@ -1,0 +1,33 @@
+{
+  "test_id": "A1_Credits_Final",
+  "category": "Auth & Quota",
+  "name": "Check API Credits Usage (final)",
+  "timestamp": "2026-11-24T01:19:43.363390+00:00",
+  "method": "POST",
+  "url": "https://api.fortyguard.com/v1/system/fetch-api-key-usage",
+  "request_headers": {
+    "Content-Type": "application/json",
+    "api-key": "REDACTED_API_KEY"
+  },
+  "request_body": {},
+  "response_status": 422,
+  "latency_ms": 282.4,
+  "response_body": {
+    "error": true,
+    "status_code": 422,
+    "message": "Field 'api_key' is required.",
+    "field": "api_key",
+    "detail": [
+      {
+        "type": "missing",
+        "loc": [
+          "body",
+          "api_key"
+        ],
+        "msg": "Field required",
+        "input": {}
+      }
+    ]
+  },
+  "notes": "Credit check (final). Remaining parsed: None"
+}

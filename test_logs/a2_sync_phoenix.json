@@ -1,0 +1,51 @@
+{
+  "test_id": "A2_Sync_Phoenix",
+  "category": "Sync Endpoint",
+  "name": "Environmental Parameters (Phoenix)",
+  "timestamp": "2026-11-24T01:17:11.325212+00:00",
+  "method": "POST",
+  "url": "https://api.fortyguard.com/v1/env_params",
+  "request_headers": {
+    "Content-Type": "application/json",
+    "api-key": "REDACTED_API_KEY"
+  },
+  "request_body": {
+    "latitude": 33.4484,
+    "longitude": -112.074
+  },
+  "response_status": 422,
+  "latency_ms": 483.52,
+  "response_body": {
+    "error": true,
+    "status_code": 422,
+    "message": "Field 'temperature' is required.",
+    "field": "temperature",
+    "detail": [
+      {
+        "type": "missing",
+        "loc": [
+          "body",
+          "temperature"
+        ],
+        "msg": "Field required",
+        "input": {
+          "latitude": 33.4484,
+          "longitude": -112.074
+        }
+      },
+      {
+        "type": "missing",
+        "loc": [
+          "body",
+          "date_time"
+        ],
+        "msg": "Field required",
+        "input": {
+          "latitude": 33.4484,
+          "longitude": -112.074
+        }
+      }
+    ]
+  },
+  "notes": ""
+}

@@ -1,0 +1,48 @@
+{
+  "test_id": "stress_routing_empty_origin",
+  "name": "Empty String Route Origin",
+  "endpoint_type": "REST",
+  "timestamp": "2026-11-24T01:31:54.203227+00:00",
+  "status_code": 422,
+  "latency_ms": 345.38,
+  "request_payload": {
+    "origin": {
+      "lat": "",
+      "lon": ""
+    },
+    "destination": {
+      "lat": 47.6805,
+      "lon": -122.3305
+    },
+    "departure_time": "2026-11-24T00:00:00Z"
+  },
+  "response_payload": {
+    "error": true,
+    "status_code": 422,
+    "message": "Field 'origin.lat' is invalid: Input should be a valid number, unable to parse string as a number",
+    "field": "origin.lat",
+    "detail": [
+      {
+        "type": "float_parsing",
+        "loc": [
+          "body",
+          "origin",
+          "lat"
+        ],
+        "msg": "Input should be a valid number, unable to parse string as a number",
+        "input": ""
+      },
+      {
+        "type": "float_parsing",
+        "loc": [
+          "body",
+          "origin",
+          "lon"
+        ],
+        "msg": "Input should be a valid number, unable to parse string as a number",
+        "input": ""
+      }
+    ]
+  },
+  "notes": "Check for clean 422 vs 500 crash"
+}

@@ -1,0 +1,68 @@
+{
+  "test_id": "stress_rate_limit_burst",
+  "name": "Rate Limiting Burst (8x env_params)",
+  "endpoint_type": "REST",
+  "timestamp": "2026-11-24T01:31:59.783645+00:00",
+  "status_code": 200,
+  "latency_ms": 5578.48,
+  "request_payload": {
+    "latitude": 47.6062,
+    "longitude": -122.3321,
+    "temperature": 20.0,
+    "date_time": {
+      "start_date": "2024-07-15",
+      "filter_type": 1
+    }
+  },
+  "response_payload": [
+    {
+      "request_num": 1,
+      "status_code": 500,
+      "latency_ms": 608.89,
+      "rate_headers": {}
+    },
+    {
+      "request_num": 2,
+      "status_code": 500,
+      "latency_ms": 701.87,
+      "rate_headers": {}
+    },
+    {
+      "request_num": 3,
+      "status_code": 500,
+      "latency_ms": 655.49,
+      "rate_headers": {}
+    },
+    {
+      "request_num": 4,
+      "status_code": 500,
+      "latency_ms": 656.62,
+      "rate_headers": {}
+    },
+    {
+      "request_num": 5,
+      "status_code": 500,
+      "latency_ms": 870.16,
+      "rate_headers": {}
+    },
+    {
+      "request_num": 6,
+      "status_code": 500,
+      "latency_ms": 667.86,
+      "rate_headers": {}
+    },
+    {
+      "request_num": 7,
+      "status_code": 500,
+      "latency_ms": 737.02,
+      "rate_headers": {}
+    },
+    {
+      "request_num": 8,
+      "status_code": 500,
+      "latency_ms": 680.57,
+      "rate_headers": {}
+    }
+  ],
+  "notes": "Evaluated 429 threshold and rate headers"
+}

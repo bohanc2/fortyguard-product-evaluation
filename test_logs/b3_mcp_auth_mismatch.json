@@ -1,0 +1,22 @@
+{
+  "test_id": "B3_MCP_Auth_Mismatch",
+  "category": "Cross-Product Consistency",
+  "name": "MCP with REST 'api-key' Header",
+  "timestamp": "2026-11-24T01:19:42.729891+00:00",
+  "method": "POST",
+  "url": "https://tos-mcp.app.fortyguard.com/mcp",
+  "request_headers": {
+    "Content-Type": "application/json",
+    "api-key": "REDACTED_API_KEY"
+  },
+  "request_body": {
+    "jsonrpc": "2.0",
+    "id": 5,
+    "method": "tools/list",
+    "params": {}
+  },
+  "response_status": 401,
+  "latency_ms": 274.2,
+  "response_body": "",
+  "notes": "Verify failure when using REST api-key header on MCP endpoint"
+}

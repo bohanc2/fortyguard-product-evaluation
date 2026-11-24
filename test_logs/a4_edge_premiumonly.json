@@ -1,0 +1,51 @@
+{
+  "test_id": "A4_Edge_PremiumOnly",
+  "category": "Edge Cases",
+  "name": "Premium Endpoint (Satellite Segmentation)",
+  "timestamp": "2026-11-24T01:19:38.338075+00:00",
+  "method": "POST",
+  "url": "https://api.fortyguard.com/v1/satellite",
+  "request_headers": {
+    "Content-Type": "application/json",
+    "api-key": "REDACTED_API_KEY"
+  },
+  "request_body": {
+    "latitude": 33.4484,
+    "longitude": -112.074
+  },
+  "response_status": 422,
+  "latency_ms": 569.6,
+  "response_body": {
+    "error": true,
+    "status_code": 422,
+    "message": "Field 'sat' is required.",
+    "field": "sat",
+    "detail": [
+      {
+        "type": "missing",
+        "loc": [
+          "body",
+          "sat"
+        ],
+        "msg": "Field required",
+        "input": {
+          "latitude": 33.4484,
+          "longitude": -112.074
+        }
+      },
+      {
+        "type": "missing",
+        "loc": [
+          "body",
+          "date_time"
+        ],
+        "msg": "Field required",
+        "input": {
+          "latitude": 33.4484,
+          "longitude": -112.074
+        }
+      }
+    ]
+  },
+  "notes": ""
+}

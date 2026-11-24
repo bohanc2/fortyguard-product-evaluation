@@ -1,0 +1,51 @@
+{
+  "test_id": "A4_Edge_NonUS",
+  "category": "Edge Cases",
+  "name": "Non-US Coordinates (Taipei)",
+  "timestamp": "2026-11-24T01:19:36.038977+00:00",
+  "method": "POST",
+  "url": "https://api.fortyguard.com/v1/env_params",
+  "request_headers": {
+    "Content-Type": "application/json",
+    "api-key": "REDACTED_API_KEY"
+  },
+  "request_body": {
+    "latitude": 25.033,
+    "longitude": 121.5654
+  },
+  "response_status": 422,
+  "latency_ms": 474.07,
+  "response_body": {
+    "error": true,
+    "status_code": 422,
+    "message": "Field 'temperature' is required.",
+    "field": "temperature",
+    "detail": [
+      {
+        "type": "missing",
+        "loc": [
+          "body",
+          "temperature"
+        ],
+        "msg": "Field required",
+        "input": {
+          "latitude": 25.033,
+          "longitude": 121.5654
+        }
+      },
+      {
+        "type": "missing",
+        "loc": [
+          "body",
+          "date_time"
+        ],
+        "msg": "Field required",
+        "input": {
+          "latitude": 25.033,
+          "longitude": 121.5654
+        }
+      }
+    ]
+  },
+  "notes": ""
+}

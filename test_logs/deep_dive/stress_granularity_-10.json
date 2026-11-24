@@ -1,0 +1,73 @@
+{
+  "test_id": "stress_granularity_-10",
+  "name": "Invalid Granularity (-10)",
+  "endpoint_type": "REST",
+  "timestamp": "2026-11-24T01:31:53.856387+00:00",
+  "status_code": 422,
+  "latency_ms": 508.44,
+  "request_payload": {
+    "polygon_aoi": {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "type": "Feature",
+          "properties": {},
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -122.335,
+                  47.608
+                ],
+                [
+                  -122.33,
+                  47.608
+                ],
+                [
+                  -122.33,
+                  47.612
+                ],
+                [
+                  -122.335,
+                  47.612
+                ],
+                [
+                  -122.335,
+                  47.608
+                ]
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    "date_time": {
+      "start_date": "2024-07-15",
+      "start_time": "14:00",
+      "filter_type": 1
+    },
+    "granularity": -10
+  },
+  "response_payload": {
+    "error": true,
+    "status_code": 422,
+    "message": "Field 'granularity' is invalid: Input should be 20, 60, 80 or 100",
+    "field": "granularity",
+    "detail": [
+      {
+        "type": "literal_error",
+        "loc": [
+          "body",
+          "granularity"
+        ],
+        "msg": "Input should be 20, 60, 80 or 100",
+        "input": -10,
+        "ctx": {
+          "expected": "20, 60, 80 or 100"
+        }
+      }
+    ]
+  },
+  "notes": "Expect 422 validation error on granularity=-10"
+}

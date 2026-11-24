@@ -1,0 +1,21 @@
+{
+  "test_id": "core_monitoring_list_alerts",
+  "name": "List Alerts Operation",
+  "endpoint_type": "MCP",
+  "timestamp": "2026-11-24T01:31:52.276528+00:00",
+  "status_code": 200,
+  "latency_ms": 731.37,
+  "request_payload": {
+    "jsonrpc": "2.0",
+    "id": 302,
+    "method": "tools/call",
+    "params": {
+      "name": "monitoring",
+      "arguments": {
+        "operation": "list_alerts"
+      }
+    }
+  },
+  "response_payload": "event: message\r\ndata: {\"jsonrpc\":\"2.0\",\"id\":302,\"result\":{\"content\":[{\"text\":\"{\\\"ok\\\":false,\\\"error\\\":{\\\"category\\\":\\\"invalid_input\\\",\\\"message\\\":\\\"The request input is invalid.\\\",\\\"retriable\\\":false},\\\"trace\\\":{\\\"trace_id\\\":\\\"b4db12ac926f\\\",\\\"tool\\\":\\\"monitoring\\\",\\\"plan_type\\\":\\\"premium\\\",\\\"decision\\\":\\\"allow\\\",\\\"status\\\":\\\"error\\\",\\\"latency_ms\\\":0,\\\"error\\\":\\\"invalid_input\\\"},\\\"message\\\":\\\"The request input is invalid.\\\"}\",\"type\":\"text\"}],\"isError\":true,\"structuredContent\":{\"ok\":false,\"error\":{\"category\":\"invalid_input\",\"message\":\"The request input is invalid.\",\"retriable\":false},\"trace\":{\"trace_id\":\"b4db12ac926f\",\"tool\":\"monitoring\",\"plan_type\":\"premium\",\"decision\":\"allow\",\"status\":\"error\",\"latency_ms\":0,\"error\":\"invalid_input\"},\"message\":\"The request input is invalid.\"}}}\r\n\r\n",
+  "notes": ""
+}

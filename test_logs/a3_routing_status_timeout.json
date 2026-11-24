@@ -1,0 +1,20 @@
+{
+  "test_id": "A3_Routing_Status_Timeout",
+  "category": "Async Lifecycle",
+  "name": "Routing Polling Timeout",
+  "timestamp": "2026-11-24T01:19:35.563052+00:00",
+  "method": "GET",
+  "url": "https://api.fortyguard.com/v1/status/032b0be6-75ab-4d95-8ee6-ad6d9ff379c1",
+  "request_headers": {
+    "Content-Type": "application/json",
+    "api-key": "REDACTED_API_KEY"
+  },
+  "request_body": {},
+  "response_status": 200,
+  "latency_ms": 141869.65,
+  "response_body": {
+    "status": "Timeout",
+    "polls": 24
+  },
+  "notes": "Exceeded 120s limit (24 polls)"
+}

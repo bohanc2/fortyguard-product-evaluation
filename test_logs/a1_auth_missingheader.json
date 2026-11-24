@@ -1,0 +1,25 @@
+{
+  "test_id": "A1_Auth_MissingHeader",
+  "category": "Auth & Quota",
+  "name": "Missing Header Test",
+  "timestamp": "2026-11-24T01:17:10.839287+00:00",
+  "method": "POST",
+  "url": "https://api.fortyguard.com/v1/env_params",
+  "request_headers": {
+    "Content-Type": "application/json"
+  },
+  "request_body": {
+    "latitude": 47.6062,
+    "longitude": -122.3321
+  },
+  "response_status": 401,
+  "latency_ms": 285.55,
+  "response_body": {
+    "error": true,
+    "status_code": 401,
+    "details": {
+      "message": "Missing required 'api-key' header. Send your key in the 'api-key' request header."
+    }
+  },
+  "notes": ""
+}

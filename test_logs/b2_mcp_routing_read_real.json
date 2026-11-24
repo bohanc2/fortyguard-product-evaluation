@@ -1,0 +1,24 @@
+{
+  "test_id": "B2_MCP_Routing_Read_Real",
+  "category": "MCP Payload Efficiency",
+  "name": "MCP temperature_routing_read with Real Activity ID",
+  "method": "POST",
+  "url": "https://tos-mcp.app.fortyguard.com/mcp",
+  "request_body": {
+    "jsonrpc": "2.0",
+    "id": 11,
+    "method": "tools/call",
+    "params": {
+      "name": "temperature_routing_read",
+      "arguments": {
+        "activity_id": "032b0be6-75ab-4d95-8ee6-ad6d9ff379c1"
+      }
+    }
+  },
+  "response_status": 200,
+  "payload_bytes": 7687,
+  "estimated_tokens": 1922,
+  "credits_remaining": 996500,
+  "credits_deducted": 3500,
+  "notes": "Verified cross-surface async reading (REST submit -> MCP read). Deducted exactly 3,500 credits upon task completion."
+}
